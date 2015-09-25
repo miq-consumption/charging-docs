@@ -14,5 +14,5 @@ You can also look at the documentation for:
 Our current roadmap and Scrum board is at:
 https://trello.com/chargeback_in_cloudforms
 
-And we have a wiki if you want to know how things are going:
+And we have a blog if you want to know how things are going:
 http://restoconstante.blogspot.com
