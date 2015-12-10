@@ -27,6 +27,34 @@ In this case the __Hourly Allocation cost per UNIT__ and the __Daily Allocation 
 With this new functionality is possible to define (new, edit and copy) a rate selecting the measurement units by metrics:
 ![](http://res.cloudinary.com/ddtbdqfq7/image/upload/v1445604777/Captura_de_pantalla_de_2015-10-19_10-33-34_ug5qek.png)
 
+### Fixed and variable rates
+Each metric has a fixed rate and a variable rate. The variable rate is the one that varies with the measure given by the application. The variable rate will be multiplied by the measured value of the metric. On the contrary the fixed rate will remain the same and will be applied always even when the value is 0.
+
+For example: we have that 9.29 GB of memory is used in a day with the variable rate set at 0,0098 dollar ($) per megabyte per day and the fixed rate set at 5,00 dollar ($) per day, the Memory Used Cost would be $39,06.
+* 9.29 GB = 9514.08 MB
+* 9514.08 MB *  (0,0098 per MB per day) + 5,00 (fixed amount) = 937,379
+* 937,379 / 24 = 39,06 Memory Used Cost
+
+If the used memory is 0, the Memory Used Cost would be $0,21:
+
+* 0 MB * (0,0098 per MB per day) + 5,00 = 5,00
+* 5,00 / 24 = 0,21 Memory Used Cost
+
+### Chargeback tiers
+
+The rate of each metric is defned through tiers which are intervals with given fixed and variable rates. By default there is a unique tier which cover all values from -Infinity to +Infinity. An example of a rate defined by tears would be: 
+
+
+        Allocated CPU:
+        
+            -∞-0 CPUs: 0 + 0$/month/cpu
+            
+            1-4  CPUs: 5 + 1.2$/month/cpu
+
+            5-8  CPUs: 5 + 1$/month/cpu
+
+            9-+∞  vCPU: 5+0.8$/month/cpu
+
 ##Example 4.1. Memory Used Cost
 
 In a scenario where 9.29 GB of memory is used in a day with the chargeback rate set at 0,0098 dollar ($) per megabyte per day, the Memory Used Cost would be $38,84.
@@ -56,7 +84,7 @@ __Procedure 4.1. To Create Chargeback Rates__
    * Use Storage to set chargeback rates for fixed and storage items.
 1. Click   (Configuration),   (Add a new Chargeback Rate) to create a new chargeback rate.
 1. Type in a Description for the chargeback rate.
-1. For each item that you want to set, type in a rate and select a time option and the __unit option__ in the event that the item supporting unit selection.
+1. For each item that you want to set, create the tiers as you want and type a fixed and a variable rate for each of them. Then select a time option and the __unit option__ in the event that the item supporting unit selection.
 1. Click Add.
 
 ## 4.1.3. Assigning Chargeback Rates
