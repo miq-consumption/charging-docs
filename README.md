@@ -19,6 +19,9 @@ You can also look at the documentation for:
 
 Our current roadmap and Scrum board is at:
 https://trello.com/chargeback_in_cloudforms
+But we are moving the Scrum board into taiga:
+https://tree.taiga.io/project/sergioocon-charging-in-manageiq/
+
 
 And we have a blog if you want to know how things are going with the project itself, is Open Source:
 http://restoconstante.blogspot.com
