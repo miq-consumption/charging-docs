@@ -7,7 +7,7 @@ There are several places for the documentation:
 - You can find requirements in the document
 - Developer documentation is in the code :D
 
-Please go the *wiki* (https://github.com/rhus/charging-docs/wiki) to see and make changes on the requirements
+Please go the *wiki* (https://github.com/miq-consumption/charging-docs/wiki) to see and make changes on the requirements
 
 You can also look at the documentation for:
 - Tariff plan and rate definitions. How we are rating. Tiers, discounts, definitions, all there
@@ -18,9 +18,7 @@ You can also look at the documentation for:
 
 
 Our current roadmap and Scrum board is at:
-https://trello.com/chargeback_in_cloudforms
-But we are moving the Scrum board into taiga:
-https://tree.taiga.io/project/sergioocon-charging-in-manageiq/
+https://www.pivotaltracker.com/n/projects/1958459
 
 
 And we have a blog if you want to know how things are going with the project itself, is Open Source:
